@@ -1,5 +1,5 @@
 ###############################################################################
-# TODO: 1. (4 pts)
+# DONE: 1. (4 pts)
 #
 #   For this module, we are going to build off our Pet class that we created in
 #   m2 of the session 16 coding exercises.
@@ -26,6 +26,22 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+class Pet:
+    def __init__(self, name, age):
+        self.name=name
+        self.age=age
+
+    def __str__(self):
+        return f"Name: {self.name}, Age: {self.age}"
+
+    def speak(self):
+        print(f"{self.name}: Moo, Moo, MOOOOOOOO!")
+
+class Dog(Pet):
+    def fetch(self):
+        print(f"{self.name} ran to get the stick!")
+    def speak(self):
+        print(f"{self.name}: Bark! Bark! Bark!")
 
 ###############################################################################
 # TODO: 2. (4 pts)
@@ -46,7 +62,16 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+class HighlandCow(Pet):
+    def __init__(self, name, age, temperment, foodeaten):
+        self.name = name
+        self.age = age
+        self.temperment = temperment
+        self.foodeaten = foodeaten
+    def temperment(self):
+        print(f"{self.temperment}: something here")
 
+    
 ###############################################################################
 # TODO: 3. (4 pts)
 #

@@ -25,7 +25,7 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
-
+##  Tiny class is called twice only write the first appearence 
 a = 20
 
 class Tiny():
@@ -59,6 +59,8 @@ def bar(a):
 
 def main():
     ### Location 8
+    a = 20
+    # Line above - just to print 
     a = foo(a)
     m = bar(a)
     ### Location 9
@@ -68,33 +70,33 @@ main()
 ###############################################################################
 # 
 #   Location 1          Location 2          Location 3
-#   a                   a                   a               
-#   m                   m                   m               
-#   self.a              self.a              self.a          
-#   self.m              self.m              self.m          
-#   t1.a                t1.a                t1.a            
-#   t1.m                t1.m                t1.m            
-#   t2.a                t2.a                t2.a            
-#   t2.m                t2.m                t2.m            
+#   a      10           a                   a         20      
+#   m                   m                   m          X     
+#   self.a              self.a              self.a     X     
+#   self.m              self.m              self.m     X     
+#   t1.a                t1.a                t1.a       X     
+#   t1.m                t1.m                t1.m       X     
+#   t2.a                t2.a                t2.a       X     
+#   t2.m                t2.m                t2.m       X     
 #
 #   Location 4          Location 5          Location 6
-#   a                   a                   a               
-#   m                   m                   m               
-#   self.a              self.a              self.a          
-#   self.m              self.m              self.m          
-#   t1.a                t1.a                t1.a            
-#   t1.m                t1.m                t1.m            
-#   t2.a                t2.a                t2.a            
-#   t2.m                t2.m                t2.m            
+#   a      34           a                   a               
+#   m      25           m                   m               
+#   self.a  X           self.a              self.a          
+#   self.m  X           self.m              self.m          
+#   t1.a    X           t1.a                t1.a            
+#   t1.m    X           t1.m                t1.m            
+#   t2.a    X           t2.a                t2.a            
+#   t2.m    X           t2.m                t2.m            
 #
 #   Location 7          Location 8          Location 9
-#   a                   a                   a               
-#   m                   m                   m               
-#   self.a              self.a              self.a          
-#   self.m              self.m              self.m          
-#   t1.a                t1.a                t1.a            
-#   t1.m                t1.m                t1.m            
-#   t2.a                t2.a                t2.a            
-#   t2.m                t2.m                t2.m            
+#   a                   a      20           a               
+#   m                   m       X           m               
+#   self.a              self.a  X           self.a          
+#   self.m              self.m  X           self.m          
+#   t1.a                t1.a    X           t1.a            
+#   t1.m                t1.m    X           t1.m            
+#   t2.a                t2.a    X           t2.a            
+#   t2.m                t2.m    X           t2.m            
 #
 ###############################################################################
