@@ -68,10 +68,11 @@ class HighlandCow(Pet):
         self.age = age
         self.temperment = temperment
         self.foodeaten = foodeaten
-    def temperment(self):
-        print(f"{self.temperment}: something here")
+    def mood(self):
+        print(f"{self.name} is super {self.temperment}, everyone loves her!")
 
-    
+    def food(self):
+        print(f"{self.name} eats so much {self.foodeaten} we call her the lawnmower.")
 ###############################################################################
 # TODO: 3. (4 pts)
 #
@@ -96,4 +97,15 @@ class HighlandCow(Pet):
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+def main():
+    dog = Dog("Wolfie", 6)
+    print(dog)
+    cow = HighlandCow("Destiny", 2, "cuddly and popular", "grass")
+    print(cow)
+    dog.fetch()
+    cow.mood()
+    cow.speak()
+    dog.speak()
+    cow.food()
 
+main()

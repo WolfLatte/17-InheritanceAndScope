@@ -70,7 +70,7 @@ main()
 ###############################################################################
 #   Location 1          Location 2          Location 3
 #   a      10           a          10       a         20      
-#   m      25           m           X       m          X     
+#   m       X           m           X       m          X     
 #   self.a  X           self.a      5       self.a     X     
 #   self.m  X           self.m     13       self.m     X     
 #   t1.a    X           t1.a        X       t1.a       X     
